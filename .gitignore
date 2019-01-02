@@ -1,3 +1,7 @@
 # .gitignore
 **/target/
 **/.mvn/
+
+# Intellij
+**/.idea/
+**/*.iml
