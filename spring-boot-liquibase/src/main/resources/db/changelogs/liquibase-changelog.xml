@@ -1,0 +1,21 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <changeSet id="1" author="lhuang">
+        <comment>Create 'users' table</comment>
+        <createTable tableName="users">
+            <column name="id" type="java.lang.String"/>
+            <column name="username" type="java.lang.String"/>
+            <column name="password" type="java.lang.String"/>
+            <column name="email" type="java.lang.String"/>
+            <column name="phone" type="java.lang.String"/>
+            <column name="age" type="java.lang.Integer"/>
+        </createTable>
+        <rollback>
+            <dropTable tableName="users"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>
