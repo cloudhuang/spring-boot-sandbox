@@ -19,3 +19,10 @@ Spring Boot Admin
     spring.boot.admin.client.url=http://localhost:8000 # 指定spring boot admin server的地址
     management.endpoints.web.exposure.include=*
     ```
+    
+    
+### TODOs
+- Security
+- Service Discovery
+- Notification   
+ 
