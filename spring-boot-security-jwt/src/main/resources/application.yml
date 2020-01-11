@@ -1,0 +1,16 @@
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+---
+spring:
+  profiles: prod
+
+---
+spring:
+  profiles: docker
