@@ -1,0 +1,24 @@
+### Create product
+POST http://localhost:8080/api/products
+Content-Type: application/json
+
+{
+  "name": "Java编程思想",
+  "price": 99,
+  "count": 100
+}
+
+### Get all products
+GET http://localhost:8080/api/products
+Accept: application/json
+
+### Get a product by id
+GET http://localhost:8080/api/products/5e252fa25c3cef070aa920ff
+Accept: application/json
+
+### Delete a product by id
+DELETE http://localhost:8080/api/products/5e252fa25c3cef070aa920ff
+Accept: application/json
+
+###
+
