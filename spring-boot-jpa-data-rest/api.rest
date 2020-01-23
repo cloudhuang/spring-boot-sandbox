@@ -1,0 +1,15 @@
+### Get all orders
+GET http://localhost:8080/api/orders
+Accept: application/json
+
+### Get a order
+GET http://localhost:8080/api/orders/3
+Accept: application/json
+
+### Pay for the order
+POST http://localhost:8080/api/orders/3/pay
+Content-Type: application/json
+
+{}
+
+###
