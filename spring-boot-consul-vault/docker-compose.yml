@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  vault:
+    container_name: vault-development
+    image: vault:latest
+    restart: always
+    ports:
+      - 8200:8200
+    depends_on:
+      - mysql
+    volumes: 
+      - ./vault.hcl:/etc/vault.hcl
+    command: "server -config=/etc/vault.hcl"
+  mysql:
+    container_name: mysql-development
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "true"
+      MYSQL_ROOT_PASS: root
+      MYSQL_USER: vault
+      MYSQL_PASSWORD: vault
+      MYSQL_DATABASE: vault

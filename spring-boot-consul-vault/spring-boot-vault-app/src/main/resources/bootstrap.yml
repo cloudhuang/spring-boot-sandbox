@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: vault-app
+  cloud:
+    vault:
+      host: 127.0.0.1
+      port: 8200
+      scheme: http
+      authentication: token
+      token: s.wwO0zFPZuNhUl2nbQ1ULR43T # here using the root token directly which generated via the vault init
+      config:
+        order: -10
+  profiles:
+    active: dev
