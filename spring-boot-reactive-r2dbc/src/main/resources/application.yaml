@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+  r2dbc:
+    url: r2dbc:mysql://localhost:3306/test_db?autoReconnect=true&useSSL=false&createDatabaseIfNotExist=true
+    username: root
+    password: root
+
+---
+spring:
+  profiles: docker
+  r2dbc:
+    url: r2dbc:mysql://db:3306/test_db?autoReconnect=true&useSSL=false&createDatabaseIfNotExist=true
+    username: root
+    password: root
