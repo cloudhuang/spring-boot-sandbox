@@ -1,0 +1,39 @@
+### Create Account
+
+POST http://localhost:8080/bank-accounts
+Content-Type: application/json
+
+{
+  "startingBalance": 1000,
+  "currency": "RMB"
+}
+
+### Credit account balance
+
+PUT http://localhost:8080/bank-accounts/credits/e9b5e179-f355-4fa1-a097-9654a79e98b4
+Content-Type: application/json
+
+{
+  "creditAmount": 100,
+  "currency": "RMB"
+}
+
+### Debits account balance
+
+PUT http://localhost:8080/bank-accounts/debits/e9b5e179-f355-4fa1-a097-9654a79e98b4
+Content-Type: application/json
+
+{
+  "debitAmount": 100,
+  "currency": "RMB"
+}
+
+### Query account events
+
+GET http://localhost:8080/bank-accounts/e9b5e179-f355-4fa1-a097-9654a79e98b4/events
+
+### Query account balance
+
+GET http://localhost:8080/bank-accounts/5661baae-9953-4468-b7d7-02ced7568be8/balance
+
+###
