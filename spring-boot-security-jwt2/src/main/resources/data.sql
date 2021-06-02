@@ -1,0 +1,12 @@
+INSERT INTO users (id, username, password, enabled) VALUES (1,'user','$2a$10$eZ/WL875qfRdn0RnDkIlNOJAxj.ysts2ZnyoM61JUDirMOvbXtN.2', 1);
+INSERT INTO users (id, username , password, enabled) VALUES (2,'admin','$2a$10$eZ/WL875qfRdn0RnDkIlNOJAxj.ysts2ZnyoM61JUDirMOvbXtN.2', 1);
+INSERT INTO roles (id, name) VALUES (1,'USER');
+INSERT INTO roles (id, name) VALUES (2,'ADMIN');
+INSERT INTO authorities (id, url, name, pid) VALUES (1,'/api/user/','user',0);
+INSERT INTO authorities (id, url, name, pid) VALUES (2,'/api/admin/','admin',0);
+INSERT INTO users_roles (user_id, role_id) VALUES (1, 1);
+INSERT INTO users_roles (user_id, role_id) VALUES (2, 1);
+INSERT INTO users_roles (user_id, role_id) VALUES (2, 2);
+INSERT INTO roles_authorities (role_id, authority_id) VALUES (1, 1);
+INSERT INTO roles_authorities (role_id, authority_id) VALUES (2, 1);
+INSERT INTO roles_authorities (role_id, authority_id) VALUES (2, 2);
